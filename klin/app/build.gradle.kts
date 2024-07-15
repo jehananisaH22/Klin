@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.BuildFeatures
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -30,6 +32,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    BuildFeatures{
+        viewBinding = true
+    }
+
 }
 
 dependencies {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jobdesk_array">
+        <item>Pilih Jobdesk Yang Anda Inginkan</item>
+        <item>Jobdesk 1</item>
+        <item>Jobdesk 2</item>
+        <item>Jobdesk 3</item>
+    </string-array>
+</resources>
