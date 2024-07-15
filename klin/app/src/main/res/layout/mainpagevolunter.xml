@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <!-- Search and Weather Section -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,15 +13,11 @@
         android:background="#FFF"
         android:layout_marginTop="25dp">
 
-
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_menu"
             android:scaleType="centerInside" />
-
-
-
 
         <EditText
             android:layout_width="0dp"
@@ -35,13 +30,11 @@
             android:backgroundTint="#1E7622"
             android:background="@drawable/search_background" />
 
-
         <ImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:src="@drawable/ic_notifications"
             android:scaleType="centerInside" />
-
 
         <ImageView
             android:layout_width="45dp"
@@ -50,32 +43,28 @@
             android:scaleType="centerInside" />
     </LinearLayout>
 
-
-
-
     <!-- Greeting and Weather Info -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:background="@drawable/background_greeting">
-
+        android:background="@drawable/background_greeting"
+        android:gravity="center_vertical">
 
         <!-- Greeting Text -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:layout_weight="1">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Selamat Pagi"
                 android:textSize="18sp"
-                android:textColor="@android:color/white"/>
-
+                android:textColor="@android:color/white" />
 
             <!-- Garis -->
             <View
@@ -83,30 +72,43 @@
                 android:layout_height="1dp"
                 android:background="@android:color/white"
                 android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"/>
-
+                android:layout_marginBottom="4dp" />
 
             <!-- Username Text -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Arifi"
-                android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                android:text="Udin Murtadin"
                 android:textColor="@android:color/white"
-                android:layout_marginStart="8dp"/>
+                android:textSize="18sp" />
         </LinearLayout>
 
-
-        <TextView
+        <!-- Weather Info -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="29 C\nRumbai\nCerah Berawan"
-            android:textSize="16sp"
+            android:orientation="horizontal"
             android:background="@drawable/background_cuaca"
-            android:textColor="@android:color/white"
-            android:gravity="end|center"/>
-    </LinearLayout>
+            android:padding="8dp"
+            android:gravity="center_vertical">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/Weather"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="29 C\nRumbai\nCerah Berawan"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <!-- Available Services -->
     <TextView
@@ -116,8 +118,7 @@
         android:text="Layanan Tersedia"
         android:textSize="17dp"
         android:textStyle="bold"
-        android:padding="16dp"/>
-
+        android:padding="16dp" />
 
     <!-- Scrollable Services -->
     <ScrollView
@@ -125,23 +126,18 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
             <!-- Include Service Items -->
             <include layout="@layout/service_item" />
             <include layout="@layout/service_item" />
             <include layout="@layout/service_item" />
             <include layout="@layout/service_item" />
-
-
         </LinearLayout>
     </ScrollView>
-
 
     <!-- Bottom Navigation -->
     <LinearLayout
@@ -151,7 +147,6 @@
         android:background="#1E7622"
         android:gravity="center">
 
-
         <!-- Home Button -->
         <ImageButton
             android:layout_width="wrap_content"
@@ -159,8 +154,7 @@
             android:src="@drawable/home"
             android:scaleType="fitStart"
             android:background="?android:attr/selectableItemBackground"
-            android:padding="16dp"/>
-
+            android:padding="16dp" />
 
         <!-- Services Button -->
         <ImageButton
@@ -171,16 +165,13 @@
             android:padding="16dp"
             android:contentDescription="@string/description_services" />
 
-
         <!-- Notifications Button -->
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/commercialnotif"
+            android:src="@drawable/commercial_notif"
             android:background="?android:attr/selectableItemBackground"
             android:padding="16dp"
             android:contentDescription="@string/description_services" />
     </LinearLayout>
-
-
 </LinearLayout>
